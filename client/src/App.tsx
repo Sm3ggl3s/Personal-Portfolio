@@ -2,14 +2,15 @@ import React from 'react';
 
 // components
 import Header from './components/Header';
+import Home from './pages/Home';
 
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
-      <div id="home" style={{ height: '100vh' }} className='bg-background}'>
-        <h1>Home</h1>
+      <div id="home" style={{ height: '100vh' }} className='bg-background min-h-[70vh] lg:min-h-screen'>
+        <Home />
       </div>
       <div id="projects" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
         <h1>Projects</h1>
