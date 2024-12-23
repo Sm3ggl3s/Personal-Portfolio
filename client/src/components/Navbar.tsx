@@ -1,10 +1,30 @@
 import React from 'react';
 
+
+const links = [
+  {
+    name: 'Home',
+    path: '#home',
+  },
+  {
+    name: 'Projects',
+    path: '#projects',
+  },
+  {
+    name: 'Resume',
+    path: '#resume',
+  }
+]
+
 const Navbar: React.FC = () => {
   return (
-    <div className='container mx-auto'>
-      <h1 className='text-white'>Navbar</h1>
-    </div>
+    <nav className='my-auto flex gap-8'>
+      {links.map((link, index) => (
+        <a key={index} href={link.path} className='text-primary text-base mx-4 '>
+          {link.name}
+        </a>
+      ))}
+    </nav>
   );
 };
 

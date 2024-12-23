@@ -1,11 +1,23 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+
+// components
+import Header from './components/Header';
+
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <>
+      <Header />
+      <div id="home" style={{ height: '100vh' }} className='bg-background}'>
+        <h1>Home</h1>
+      </div>
+      <div id="projects" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
+        <h1>Projects</h1>
+      </div>
+      <div id="resume" style={{ height: '100vh', backgroundColor: '#d0d0d0' }}>
+        <h1>Resume</h1>
+      </div>
+    </>
   );
 };
 
