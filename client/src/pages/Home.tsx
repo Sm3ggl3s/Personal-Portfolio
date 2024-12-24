@@ -2,6 +2,7 @@ import React from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const externalLinks = [
     {
@@ -40,6 +41,15 @@ const Home: React.FC = () => {
                             and immersing myself in new programming languages, frameworks,
                             and tools to continually expand my expertise. 
                             </p>
+                            {/* Button and Social */}
+                            <div className="flex flex-col xl:flex-row items-center gap-8">
+                                <button className='border-secondary border-2 px-6 py-2 rounded-full text-secondary hover:bg-secondary hover:text-background transition-all'>
+                                    <span className='flex gap-2 capitalize'> 
+                                        Download CV
+                                        <FontAwesomeIcon icon={faDownload} className='text-xl'/>
+                                    </span>
+                                </button>
+                            </div>
                         </div>
                         <div></div>
                     </div>
