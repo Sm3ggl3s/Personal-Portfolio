@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <>
       <Header />
-      <div id="home" style={{ height: '100vh' }} className='bg-background min-h-[70vh] lg:min-h-screen'>
+      <div id="home" style={{ height: '100vh' }} className='text-primary bg-background pt-16 min-h-[70vh] lg:min-h-screen'>
         <Home />
       </div>
       <div id="projects" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
