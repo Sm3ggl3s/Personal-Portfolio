@@ -3,22 +3,28 @@ import React from 'react';
 // components
 import Header from './components/Header';
 import Home from './pages/Home';
-
+import ParticleBg from './components/ParticleBg';
 
 const App: React.FC = () => {
   return (
-    <>
-      <Header />
-      <div id="home" style={{ height: '100vh' }} className='text-primary bg-background pt-16 min-h-[70vh] lg:min-h-screen'>
-        <Home />
+    <div className='relative'>
+      {/* Particles in the background */}
+      <ParticleBg />
+
+      {/* Main content */}
+      <div className='relative z-10'>
+        <Header />
+        <div id='home' className='text-primary pt-16 min-h-screen'>
+          <Home />
+        </div>
+        <div id='projects' className='min-h-screen '>
+          <h1>Projects</h1>
+        </div>
+        <div id='resume' className='min-h-screen'>
+          <h1>Resume</h1>
+        </div>
       </div>
-      <div id="projects" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
-        <h1>Projects</h1>
-      </div>
-      <div id="resume" style={{ height: '100vh', backgroundColor: '#d0d0d0' }}>
-        <h1>Resume</h1>
-      </div>
-    </>
+    </div>
   );
 };
 
