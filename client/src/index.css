@@ -5,10 +5,16 @@
 @tailwind utilities;
 
 /* Custom styles */
-:root {
+.dark {
     --primary: #EDEDED;
     --secondary: #48A89D;
-    --tertiary: #1A1A1A;
+    --background: #1A1A1A;
+}
+
+.light {
+    --primary: #1A1A1A;
+    --secondary: #48A89D;
+    --background: #EDEDED;
 }
 
 html {
