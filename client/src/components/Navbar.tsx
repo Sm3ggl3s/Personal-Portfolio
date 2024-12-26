@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons'; 
+import { faMoon as regularMoon } from '@fortawesome/free-regular-svg-icons';
 
 
 const links = [
@@ -44,7 +47,7 @@ const Navbar: React.FC = () => {
   }, []);
   
   return (
-    <nav className='my-auto flex gap-8'>
+    <nav className='my-auto flex gap-8 items-center'>
       {links.map((link, index) => (
           <a
             key={index}
@@ -58,6 +61,7 @@ const Navbar: React.FC = () => {
             {link.name}
           </a>
         ))}
+      <FontAwesomeIcon icon={regularMoon} className='text-secondary text-xl' />
     </nav>
   );
 };

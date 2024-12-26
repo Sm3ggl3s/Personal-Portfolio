@@ -5,9 +5,16 @@
 @tailwind utilities;
 
 /* Custom styles */
+:root {
+    --primary: #EDEDED;
+    --secondary: #48A89D;
+    --tertiary: #1A1A1A;
+}
+
 html {
     scroll-behavior: smooth;
 }
+
 
 @layer base {
     h1 {
