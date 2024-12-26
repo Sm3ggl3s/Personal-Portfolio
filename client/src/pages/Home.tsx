@@ -1,19 +1,9 @@
 import React from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
+import Socials from '../components/Socials';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 
-const externalLinks = [
-    {
-        icon: faGithub,
-        link: ''
-    },
-    {
-        icon: faLinkedin,
-        link: ''
-    },
-]
 
 
 const Home: React.FC = () => {
@@ -35,7 +25,7 @@ const Home: React.FC = () => {
                             <h1 className='h1 font-sans'>
                                 Hello I'm <br /> <span className='text-secondary'>James Anderson</span>
                             </h1>
-                            <p className='font-serif max-w-[500px] mb-9'>
+                            <p className='font-serif max-w-[625px] mb-9'>
                             I am always eager to learn, grow, and refine my skills. 
                             I thrive on exploring new concepts, tackling challenges,
                             and immersing myself in new programming languages, frameworks,
@@ -49,6 +39,9 @@ const Home: React.FC = () => {
                                         <FontAwesomeIcon icon={faDownload} className='text-xl'/>
                                     </span>
                                 </button>
+                                <Socials containerStyles='flex gap-6' iconStyles='w-9 h-9 border border-secondary rounded-full flex
+                                justify-center items-center text-secondary text-base hover:bg-secondary hover:text-background
+                                hover:transition-all duration-500'/>
                             </div>
                         </div>
                         <div></div>
