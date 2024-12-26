@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons'; 
+import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as regularMoon } from '@fortawesome/free-regular-svg-icons';
 
 const links = [
@@ -55,22 +55,20 @@ const Navbar: React.FC = () => {
   return (
     <nav className='my-auto flex gap-8 items-center'>
       {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.path}
-            className={`text-base ${
-              activeSection === link.path.substring(1)
-                ? 'text-secondary border-b-2 border-secondary'
-                : 'text-primary'
-            }`}
-          >
-            {link.name}
-          </a>
-        ))}
-      <FontAwesomeIcon 
-        icon={isDarkMode ? solidMoon : regularMoon} 
-        className='text-secondary text-xl cursor-pointer' 
-        onClick={toggleTheme} 
+        <a
+          key={index}
+          href={link.path}
+          className={`text-base transition duration-500  ${activeSection === link.path.substring(1)
+              ? 'text-secondary border-b-2 border-secondary'
+              : 'text-primary'} hover:text-secondary hover:scale-110`}
+        >
+          {link.name}
+        </a>
+      ))}
+      <FontAwesomeIcon
+        icon={isDarkMode ? solidMoon : regularMoon}
+        className='text-secondary text-xl cursor-pointer'
+        onClick={toggleTheme}
       />
     </nav>
   );

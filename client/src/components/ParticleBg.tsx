@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadFull } from "tsparticles";
-import tailwindcss from "tailwindcss";
 
 const ParticleBg: React.FC = () => {
     const [init, setInit] = useState<boolean>(false);
