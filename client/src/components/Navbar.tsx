@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon as regularMoon } from '@fortawesome/free-regular-svg-icons';
 
 const links = [
   {
@@ -10,15 +12,12 @@ const links = [
     name: 'Projects',
     path: '#projects',
   },
-  {
-    name: 'Resume',
-    path: '#resume',
-  }
 ]
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,22 +41,31 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark', !isDarkMode);
+    document.body.classList.toggle('light', isDarkMode);
+  };
+
   return (
-    <nav className='my-auto flex gap-8'>
+    <nav className='my-auto flex gap-8 items-center'>
       {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.path}
-            className={`text-base ${
-              activeSection === link.path.substring(1)
-                ? 'text-secondary border-b-2 border-secondary'
-                : 'text-primary'
-            }`}
-          >
-            {link.name}
-          </a>
-        ))}
+        <a
+          key={index}
+          href={link.path}
+          className={`text-base transition duration-500  ${activeSection === link.path.substring(1)
+              ? 'text-secondary border-b-2 border-secondary'
+              : 'text-primary'} hover:text-secondary hover:scale-110`}
+        >
+          {link.name}
+        </a>
+      ))}
+      <FontAwesomeIcon
+        icon={isDarkMode ? solidMoon : regularMoon}
+        className='text-secondary text-xl cursor-pointer'
+        onClick={toggleTheme}
+      />
     </nav>
   );
 };

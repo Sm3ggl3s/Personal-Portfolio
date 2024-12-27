@@ -10,9 +10,9 @@ export default {
         sans: ['Roboto', 'sans-serif'],
       },
       colors: {
-        primary: '#EDEDED',
-        secondary: '#48A89D',
-        background: '#1A1A1A',
+        primary: 'var(--primary)',
+        secondary: 'var(--secondary)',
+        background: 'var(--background)',
       },
     },
   },
