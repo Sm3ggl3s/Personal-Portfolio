@@ -12,10 +12,6 @@ const links = [
     name: 'Projects',
     path: '#projects',
   },
-  {
-    name: 'Resume',
-    path: '#resume',
-  }
 ]
 
 const Navbar: React.FC = () => {
