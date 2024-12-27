@@ -3,6 +3,7 @@ import React from 'react'
 // components
 import Navbar from './Navbar'
 
+
 const Header: React.FC = () => {
     return (
         <header className='py-2 xl:py-4 text-primary h-16 fixed top-0 container z-50'>
@@ -19,7 +20,7 @@ const Header: React.FC = () => {
 
                 {/* Mobile Navbar */}
                 <div className="xl:hidden">
-                    mobile navbar
+                    <div>Mobile Nav</div>
                 </div>
             </div>
         </header>

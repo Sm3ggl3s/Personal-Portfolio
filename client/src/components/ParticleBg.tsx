@@ -59,14 +59,14 @@ const ParticleBg: React.FC = () => {
                         },
                         particles: {
                             color: {
-                                value: ["#48A89D", "#EDEDED"], // Use Tailwind for particle colors
+                                value: ['#EDEDED', '1A1A1A'], // Use Tailwind for particle colors
                             },
                             links: {
-                                color: "#EDEDED",
+                                color: "#48A89D",
                                 distance: 150,
                                 enable: true,
                                 opacity: 0.5,
-                                width: 1,
+                                width: 1.5,
                             },
                             move: {
                                 direction: "none",
