@@ -20,9 +20,6 @@ const App: React.FC = () => {
         <div id='projects' className='min-h-screen '>
           <h1>Projects</h1>
         </div>
-        <div id='resume' className='min-h-screen'>
-          <h1>Resume</h1>
-        </div>
       </div>
     </div>
   );
