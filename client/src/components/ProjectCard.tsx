@@ -1,20 +1,52 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const ProjectCard: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+    const toggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+
     return (
         <>
-            <div className='text-primary bg-secondary rounded-lg p-4 min-h-[300px] max-w-[400px]'>
-                <h1 className='text-2xl font-bold text-center justify-center'>Project Name</h1>
-                <div className='bg-primary text-background h-48 flex items-center justify-center my-3 rounded-lg'>
-                    <span>Image Placeholder</span>
-                </div>
-                <p className='mt-2'>Project Description</p>
-                <div className='mt-4'>
-                    <a href='#' className='text-primary bg-secondary px-4 py-2 rounded-lg'>View Project</a>
-                </div>
+            {/* Card */}
+            <div
+                onClick={toggleModal}
+                className="text-primary bg-secondary rounded-lg min-h-[200px] max-w-[400px] cursor-pointer hover:shadow-lg transition-shadow duration-300"
+            >
+                <div className="relative bg-secondary text-background h-48 flex items-center justify-center mb-3 rounded-t-lg overflow-hidden">
+                    <span className="absolute inset-0 bg-primary z-10"></span>
+                    <span className="absolute bottom-0 left-0 z-20 text-start text-primary font-bold text-lg p-2 bg-background bg-opacity-50 rounded-tr-lg">Project Title</span>
+                    </div>
+                <p className="my-2 text-center">Brief project description goes here.</p>
             </div>
-        </>
-    )
-}
 
-export default ProjectCard
+            {/* Modal */}
+            {isModalOpen && (
+                <div
+                    className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+                    onClick={toggleModal}
+                >
+                    <div
+                        className="bg-white rounded-lg p-6 max-w-md w-full text-center relative"
+                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+                    >
+                        <h2 className="text-2xl font-bold mb-4">Project Title</h2>
+                        <p className="mb-4">
+                            Detailed information about the project goes here. Explain the tools,
+                            technologies, or objectives of the project.
+                        </p>
+                        <button
+                            onClick={toggleModal}
+                            className="px-4 py-2 bg-secondary text-primary rounded-lg"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+};
+
+export default ProjectCard;
