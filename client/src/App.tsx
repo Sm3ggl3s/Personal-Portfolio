@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './components/Header';
 import Home from './pages/Home';
 import ParticleBg from './components/ParticleBg';
+import Projects from './pages/Projects';
 
 const App: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const App: React.FC = () => {
           <Home />
         </div>
         <div id='projects' className='min-h-screen '>
-          <h1>Projects</h1>
+          <Projects />
         </div>
       </div>
     </div>
