@@ -1,0 +1,27 @@
+[
+    {
+        "name": "1st Project Name",
+        "description": "Short description of the project", 
+        "githubRepo": "https://github.com/user/repo", 
+        "liveUrl": "https://project-live-url.com" 
+    },
+    {
+        "name": "2nd Project Name",
+        "description": "Another project description",
+        "githubRepo": "https://github.com/user/another-repo",
+        "liveUrl": "https://another-project-live-url.com"
+    },
+    {
+        "name": "3rd Project Name",
+        "description": "Short description of the project", 
+        "githubRepo": "https://github.com/user/repo", 
+        "liveUrl": "https://project-live-url.com" 
+    },
+    {
+        "name": "4th Project Name",
+        "description": "Another project description",
+        "githubRepo": "https://github.com/user/another-repo",
+        "liveUrl": "https://another-project-live-url.com"
+    }
+    
+]
