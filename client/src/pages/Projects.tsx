@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectCard from '../components/ProjectCard';
+import { Project } from '../types/types';
 
 const Projects: React.FC = () => {
-    const totalProjects = 8; // Total number of projects
-    const projectsPerPage = 6; // Number of projects per page
-    const totalPages = Math.ceil(totalProjects / projectsPerPage);
-
+    const [projects, setProjects] = useState<Project[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const projectsPerPage = 6;
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const response = await fetch('http://localhost:8000/api/projects');
+                const data = await response.json();
+                console.log('Fetched projects:', data); // Add this line
+                setProjects(data);
+            } catch (error) {
+                console.error('Error fetching projects:', error);
+            }
+        };
+    
+        fetchProjects();
+    }, []);
+
+    const totalPages = Math.ceil(projects.length / projectsPerPage);
 
     const handlePrevious = () => {
         if (currentPage > 1) {
@@ -20,10 +36,9 @@ const Projects: React.FC = () => {
         }
     };
 
-    // Calculate the indices of projects to display
     const startIndex = (currentPage - 1) * projectsPerPage;
     const endIndex = startIndex + projectsPerPage;
-    const currentProjects = Array.from({ length: totalProjects }).slice(startIndex, endIndex);
+    const currentProjects = projects.slice(startIndex, endIndex);
 
     return (
         <>
@@ -40,8 +55,8 @@ const Projects: React.FC = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8 my-auto">
-                    {currentProjects.map((_, index) => (
-                        <ProjectCard key={startIndex + index} />
+                    {currentProjects.map((project) => (
+                        <ProjectCard key={project._id} project={project} />
                     ))}
                 </div>
                 <div className="flex flex-col items-center justify-center mt-8">
@@ -63,7 +78,7 @@ const Projects: React.FC = () => {
                         >
                             Next
                         </button>
-                    </div>z
+                    </div>
                 </div>
             </div>
         </>

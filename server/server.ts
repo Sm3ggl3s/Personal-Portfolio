@@ -1,6 +1,7 @@
 // src/index.ts
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import { connectDB } from "./config/db";
 
 const port = process.env.PORT ||8000;
@@ -9,6 +10,7 @@ connectDB();
 
 const app: Express = express();
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
