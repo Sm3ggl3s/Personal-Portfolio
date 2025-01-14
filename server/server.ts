@@ -1,4 +1,4 @@
-// src/server.ts
+// src/index.ts
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db";
@@ -15,7 +15,7 @@ app.get("/", (req: Request, res: Response) => {
     res.send("Express + TypeScript Server");
 });
 
-app.use("/api", require("../routes/projectRoutes"));
+app.use("/api", require("./routes/projectRoutes"));
 
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
