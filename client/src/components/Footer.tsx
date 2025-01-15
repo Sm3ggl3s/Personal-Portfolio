@@ -2,15 +2,16 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
+
 const Footer: React.FC = () => {
     const socialLinks = [
-        { href: '#', icon: faLinkedin, label: 'LinkedIn' },
-        { href: '#', icon: faGithub, label: 'GitHub' },
+        { href: 'https://www.linkedin.com/in/janderson2429/', icon: faLinkedin, label: 'LinkedIn' },
+        { href: 'https://github.com/Sm3ggl3s', icon: faGithub, label: 'GitHub' },
     ];
 
     return (
         <footer className="text-primary py-6">
-            <div className="container mx-auto flex flex-row items-left justify-between">
+            <div className="container mx-4 flex flex-row gap-10 xl:justify-between">
                 <p className="text-sm mb-4">&copy; {new Date().getFullYear()} James Anderson. All rights reserved.</p>
                 <div className="flex space-x-6">
                     {socialLinks.map((link, index) => (

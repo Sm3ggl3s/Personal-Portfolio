@@ -33,12 +33,6 @@ const Home: React.FC = () => {
                             </p>
                             {/* Button and Social */}
                             <div className="flex flex-col xl:flex-row items-center gap-8">
-                                <button className='border-secondary border-2 px-6 py-2 rounded-full text-secondary hover:bg-secondary hover:text-background transition-all'>
-                                    <span className='flex gap-2 capitalize'> 
-                                        Download CV
-                                        <FontAwesomeIcon icon={faDownload} className='text-xl'/>
-                                    </span>
-                                </button>
                                 <Socials containerStyles='flex gap-6' iconStyles='w-9 h-9 border border-secondary rounded-full flex
                                 justify-center items-center text-secondary text-base hover:bg-secondary hover:text-background
                                 hover:transition-all duration-500'/>

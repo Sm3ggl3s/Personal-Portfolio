@@ -5,11 +5,11 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const externalLinks = [
     {
         icon: faGithub,
-        link: ''
+        link: 'https://github.com/Sm3ggl3s'
     },
     {
         icon: faLinkedin,
-        link: ''
+        link: 'https://www.linkedin.com/in/janderson2429/'
     },
 ]
 
@@ -23,7 +23,7 @@ const Socials: React.FC<SocialsProps> = ({ containerStyles, iconStyles }) => {
     return (
         <div className={containerStyles as string}>
             {externalLinks.map((link, index) => (
-                <a key={index} href={link.link} className={iconStyles as string}>
+                <a key={index} href={link.link} className={iconStyles as string} target="_blank">
                     <FontAwesomeIcon icon={link.icon} />
                 </a>
             ))}
