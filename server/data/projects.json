@@ -18,7 +18,7 @@
         "description": "Class Connect is a scheduling app for streamlining office hour appointments between students and instructional teams. Featuring a user-friendly interface, it simplifies booking while ensuring accountability. Built with SvelteKit and TypeScript, it integrates PostgreSQL for data management. This project was developed during an independent study at UNC Charlotte's College of Computing.",
         "githubRepo": "https://github.com/DylanHalstead/ClassConnect",
         "image": "https://ik.imagekit.io/Sm3ggl3s/ClassConnect.png?updatedAt=1736878561809",
-        "techStack": ["SvelteKit", "TypeScript", "PostgreSQL, HTML, CSS, Figma, GCP, Docker, Tailwind"]
+        "techStack": ["SvelteKit", "TypeScript", "PostgreSQL", "HTML", "CSS", "Figma", "GCP", "Docker", "Tailwind"]
     },
     {
         "name": "Tranquil Acres",
@@ -46,14 +46,14 @@
         "description": "Grove Guardian is a strategic tower defense game developed in GameMaker Studio. Players defend their grove from enemy waves using turrets and dynamic layouts. Contributions include grid-based level design, turret mechanics, and enemy AI. The project involved implementing a shop system, interactive menus, and a polished user experience.",
         "githubRepo": "https://github.com/Sm3ggl3s/GroveGuardian",
         "image": "https://ik.imagekit.io/Sm3ggl3s/Grove-Guardian.png?updatedAt=1736878563125",
-        "techStack": ["GameMakerStudio", "GML", "Figma"]
+        "techStack": ["GameMakerStudio", "Figma"]
     },
     {
         "name": "Adaptoad",
         "description": "Adaptoad is a 2D platformer where players navigate a jungle as a toad adapting to deforestation. The game features evolving abilities based on damage taken, allowing players to defeat enemies and obstacles. Developed with GameMaker Studio, contributions include programming, design, and art to create an engaging world of survival and adaptation.",
         "githubRepo": "https://github.com/Sm3ggl3s/Adaptoad",
         "image": "https://ik.imagekit.io/Sm3ggl3s/Adaptoad-Title%20Medium.png?updatedAt=1736878561633",
-        "techStack": ["GameMakerStudio", "GML", "Figma"]
+        "techStack": ["GameMakerStudio", "Figma"]
     },
     {
         "name": "Stock Site",
