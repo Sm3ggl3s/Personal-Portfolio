@@ -1,5 +1,38 @@
 import React, { useState } from 'react';
 import { ProjectCardProps } from '../types/types';
+import { SiBootstrap, SiSvelte, SiTypescript, SiBlender, SiFlask, SiPostgresql, SiJupyter, SiGamemaker, SiGooglecloud,SiSqlalchemy, SiDocker, SiJavascript, SiExpress, SiReact, SiCss3, SiTailwindcss, SiPython, SiMongodb} from 'react-icons/si';
+import { FaNodeJs, FaHtml5, FaFigma, FaUnity, FaImages} from "react-icons/fa";
+import { PiFileCSharp } from "react-icons/pi";
+
+
+
+const techIcons: { [key: string]: any } = {
+    'React': SiReact,
+    'Node.js': FaNodeJs,
+    'SvelteKit': SiSvelte,
+    'Express': SiExpress,
+    'MongoDB': SiMongodb,
+    'TypeScript': SiTypescript,
+    'JavaScript': SiJavascript,
+    'HTML': FaHtml5,
+    'CSS': SiCss3,
+    'Tailwind': SiTailwindcss,
+    'Bootstrap': SiBootstrap,
+    'Figma': FaFigma,
+    'Blender': SiBlender,
+    'Unity': FaUnity,
+    'C#': PiFileCSharp,
+    'Python': SiPython,
+    'ImageKit': FaImages, 
+    'PostgreSQL': SiPostgresql,
+    'GCP': SiGooglecloud,
+    'Docker': SiDocker,
+    'SQLAlchemy': SiSqlalchemy,
+    'GameMakerStudio': SiGamemaker,  
+    'Jupyter Notebook': SiJupyter,
+    'Flask': SiFlask,
+};
+
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -19,7 +52,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                     <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover z-10" />
                     <span className="absolute bottom-0 left-0 z-20 text-start text-primary font-bold text-lg p-2 bg-background bg-opacity-50 rounded-tr-lg"> {project.name} </span>
                 </div>
-                <p className="my-2 text-center"> Stack symbols go here. </p>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2 my-2">
+                    {project.techStack.map((tech: string, index: number) => {
+                        const IconComponent = techIcons[tech];
+                        return (
+                            <div key={index} className="flex justify-center">
+                                {IconComponent ? (
+                                    <IconComponent className="text-2xl" /> // Adjust the size here
+                                ) : (
+                                    <SiJavascript className="text-2xl" /> // Default icon if tech is not found
+                                )}
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
 
             {/* Modal */}
@@ -40,13 +86,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                                 <h2 className='mt-0 mr-8 mb-3 font-normal text-2xl'> {project.name} </h2>
                                 <p className='opacity text-sm font-normal mb-8 opacity-50'> {project.description}</p>
                             </div>
-                            <div className="w-full md:w-1/2 pl-4 grid grid-cols-2 gap-4 my-auto">
-                                <p className="text-center"> Language 1</p>
-                                <p className="text-center"> Language 2</p>
-                                <p className="text-center"> Language 3</p>
-                                <p className="text-center"> Language 4</p>
-                                <p className="text-center"> Language 5</p>
-                                <p className="text-center"> Language 6</p>
+                            <div className="w-full md:w-1/2 pl-4 grid grid-cols-2 sm:grid-cols-3 gap-4 my-auto">
+                                {project.techStack.map((tech: string, index: number) => {
+                                    const IconComponent = techIcons[tech];
+                                    return (
+                                        <div key={index} className="flex flex-col items-center">
+                                            {IconComponent ? (
+                                                <IconComponent className="text-2xl mb-2" /> // Adjust the size here
+                                            ) : (
+                                                <SiJavascript className="text-2xl mb-2" /> // Default icon if tech is not found
+                                            )}
+                                            <p className="text-center text-sm">{tech}</p>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

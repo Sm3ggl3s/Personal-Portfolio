@@ -4,6 +4,7 @@ export interface Project {
     description: string;
     githubRepo: string;
     image: string;
+    techStack: string[];
 }
 
 export interface ProjectCardProps {
