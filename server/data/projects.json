@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Personal Portfolio",
+        "description": "This personal portfolio showcases my projects, skills, and experiences. Built with React for a dynamic front-end, and Express with TypeScript for reliable back-end development, it offers a responsive interface. Data is stored in MongoDB, making content management efficient. Figma and ImageKit enhance the design and visual content delivery.", 
+        "githubRepo": "https://github.com/Sm3ggl3s/Personal-Portfolio", 
+        "image": "https://ik.imagekit.io/Sm3ggl3s/Personal-Porfolio.png?updatedAt=1736878561827",
+        "techStack": ["React", "Express", "TypeScript", "MongoDB, HTML, CSS, Figma, ImageKit"]
+    },
+    {
+        "name": "Glowshroom Labyrinth Escape",
+        "description": "Glowshroom Labyrinth Escape is a survival maze game where players navigate a procedurally generated labyrinth. The game combines light versus dark mechanics and exploration, all wrapped in a vibrant low-poly, cartoon style. Created in Unity, players must uncover secrets and escape before their glow fades, offering a dynamic exploration experience.",
+        "githubRepo": "https://github.com/Sm3ggl3s/Glowshroom-Labyrinth-Escape",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/Glowshroom-Labyrinth-Escape-Title.png?updatedAt=1736878567960",
+        "techStack": ["Unity", "C#", "Blender", "Figma"]
+    },
+    {
+        "name": "Class Connect",
+        "description": "Class Connect is a scheduling app for streamlining office hour appointments between students and instructional teams. Featuring a user-friendly interface, it simplifies booking while ensuring accountability. Built with SvelteKit and TypeScript, it integrates PostgreSQL for data management. This project was developed during an independent study at UNC Charlotte's College of Computing.",
+        "githubRepo": "https://github.com/DylanHalstead/ClassConnect",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/ClassConnect.png?updatedAt=1736878561809",
+        "techStack": ["SvelteKit", "TypeScript", "PostgreSQL", "HTML", "CSS", "Figma", "GCP", "Docker", "Tailwind"]
+    },
+    {
+        "name": "Tranquil Acres",
+        "description": "Tranquil Acres is a serene and immersive farming simulation game developed in Unity. Dive into the peaceful countryside and experience the joys of tending to your own farm, cultivating crops, and building your dream homestead.",
+        "githubRepo": "https://github.com/Sm3ggl3s/TranquilAcres",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/Tranquil-Acres.png?updatedAt=1736878563639",
+        "techStack": ["Unity", "C#", "Blender", "Figma"]
+    },
+    {
+        "name": "CricketHub",
+        "description": "CricketHub is a platform for cricket enthusiasts, offering resources and tools to engage with the sport. Built with Python and Flask, the site uses Bootstrap for a responsive design. PostgreSQL and SQLAlchemy manage data efficiently. The interactive interface and rich content make CricketHub a hub for cricket fans.",
+        "githubRepo": "https://github.com/Sm3ggl3s/CricketHub",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/CricketHub.png?updatedAt=1736891027746",
+        "techStack": ["Python", "Flask", "HTML", "CSS", "Bootstrap", "Figma", "PostgreSQL", "SQLAlchemy", "JavaScript"]
+    },
+    {
+        "name": "Grove Guardian 3D",
+        "description": "Grove Guardian 3D is a Unity-developed tower defense game where players protect a grove using strategic turrets against waves of enemies. The project transforms a 2D concept into a 3D experience with dynamic AI, detailed environments, and engaging gameplay. Contributions include designing 3D levels, game mechanics, and refining visual and audio elements.",
+        "githubRepo": "https://github.com/Sm3ggl3s/GroveGuardian3D",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/GroveGuardian3D.png?updatedAt=1736890897560",
+        "techStack": ["Unity", "C#", "Blender", "Figma"]
+    },
+    {
+        "name": "Grove Guardian",
+        "description": "Grove Guardian is a strategic tower defense game developed in GameMaker Studio. Players defend their grove from enemy waves using turrets and dynamic layouts. Contributions include grid-based level design, turret mechanics, and enemy AI. The project involved implementing a shop system, interactive menus, and a polished user experience.",
+        "githubRepo": "https://github.com/Sm3ggl3s/GroveGuardian",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/Grove-Guardian.png?updatedAt=1736878563125",
+        "techStack": ["GameMakerStudio", "Figma"]
+    },
+    {
+        "name": "Adaptoad",
+        "description": "Adaptoad is a 2D platformer where players navigate a jungle as a toad adapting to deforestation. The game features evolving abilities based on damage taken, allowing players to defeat enemies and obstacles. Developed with GameMaker Studio, contributions include programming, design, and art to create an engaging world of survival and adaptation.",
+        "githubRepo": "https://github.com/Sm3ggl3s/Adaptoad",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/Adaptoad-Title%20Medium.png?updatedAt=1736878561633",
+        "techStack": ["GameMakerStudio", "Figma"]
+    },
+    {
+        "name": "Stock Site",
+        "description": "This project explores the performance of various machine learning models in predicting Apple's stock prices using the AAPL.csv dataset. The notebook employs GridSearchCV for hyperparameter tuning to optimize model performance.",
+        "githubRepo": "https://github.com/Sm3ggl3s/StockSight",
+        "image": "https://ik.imagekit.io/Sm3ggl3s/StockSight.png?updatedAt=1736897476811",
+        "techStack": ["Python", "Jupyter Notebook"]
+    }  
+    
+]
