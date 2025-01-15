@@ -3,7 +3,7 @@ export interface Project {
     name: string;
     description: string;
     githubRepo: string;
-    liveUrl: string;
+    image: string;
 }
 
 export interface ProjectCardProps {
