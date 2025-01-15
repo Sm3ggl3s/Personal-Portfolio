@@ -5,7 +5,7 @@ export const getProjects = async (req: Request, res: Response) => {
     try {
         console.log("Received request to get projects");
         const projects = await Project.find({});
-        console.log("Projects retrieved from database:", projects);
+        console.log("Projects retrieved from database");
         res.json(projects);
     } catch (error) {
         if (error instanceof Error) {
