@@ -62,7 +62,7 @@ const Projects: React.FC = () => {
                 <div className="flex flex-col items-center justify-center mt-8">
                     <div className="flex">
                         <button
-                            className={`px-4 py-2 mx-2 rounded ${currentPage === 1 ? 'bg-gray-400' : 'bg-primary text-white'}`}
+                            className={`px-4 py-2 mx-2 rounded ${currentPage === 1 ? 'bg-primary text-secondary' : 'bg-secondary text-primary'}`}
                             onClick={handlePrevious}
                             disabled={currentPage === 1}
                         >
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
                             Page {currentPage} of {totalPages}
                         </div>
                         <button
-                            className={`px-4 py-2 mx-2 rounded ${currentPage === totalPages ? 'bg-background-400' : 'bg-primary text-secondary'}`}
+                            className={`px-4 py-2 mx-2 rounded ${currentPage === totalPages ? 'bg-primary text-secondary' : 'bg-secondary text-primary'}`}
                             onClick={handleNext}
                             disabled={currentPage === totalPages}
                         >
