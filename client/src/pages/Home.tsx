@@ -18,7 +18,7 @@ const Home: React.FC = () => {
         <>
             <div className="h-full">
                 <div className="max-w-7xl container mx-auto h-full ">
-                    <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-24 xl:pb-72">
+                    <div className="flex flex-col xl:flex-row justify-between items-center pt-12 pb-12 xl:pt-24 xl:pb-72">
                         {/* Text  */}
                         <div className='text-center xl:text-left'>
                             <span className='text-base font-serif'> {text} Developer</span>

@@ -2,6 +2,7 @@ import React from 'react'
 
 // components
 import Navbar from './Navbar'
+import MobileNavbar from './MobileNavbar';
 
 
 const Header: React.FC = () => {
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
 
                 {/* Mobile Navbar */}
                 <div className="xl:hidden">
-                    <div>Mobile Nav</div>
+                    <MobileNavbar />
                 </div>
             </div>
         </header>
