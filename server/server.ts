@@ -10,7 +10,9 @@ connectDB();
 
 const app: Express = express();
 
-app.use(cors());
+app.use(cors(
+    origin: 'jameslanderson.netlify.app'
+));
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {

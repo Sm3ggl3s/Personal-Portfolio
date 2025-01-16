@@ -10,7 +10,7 @@ const Projects: React.FC = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await fetch('http://localhost:8000/api/projects');
+                const response = await fetch('https://personal-portfolio-fh1y.onrender.com/api/projects');
                 const data = await response.json();
                 console.log('Fetched projects:', data); // Add this line
                 setProjects(data);

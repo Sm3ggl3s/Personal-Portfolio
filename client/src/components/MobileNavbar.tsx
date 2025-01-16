@@ -3,23 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon as solidMoon } from '@fortawesome/free-solid-svg-icons';
 import { faMoon as regularMoon } from '@fortawesome/free-regular-svg-icons';
 
-
-const links = [
-    {
-        name: 'Home',
-        path: '#home',
-    },
-    {
-        name: 'Projects',
-        path: '#projects',
-    },
-    {
-        name: 'Resume',
-        path: '#resume',
-    }
-]
-
-
 const MobileNavbar: React.FC = () => {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 

@@ -16,16 +16,11 @@ const links = [
 
 const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [isDarkMode, setIsDarkMode] = useState<boolean>(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
       // Toggle navbar shrinking on scroll
-      setIsScrolled(scrollPosition > 50);
-
       // Detect current section
       const sections = links.map(link => document.querySelector(link.path));
       sections.forEach((section, index) => {

@@ -1,10 +1,6 @@
 import React from 'react'
 import { useTypewriter } from 'react-simple-typewriter'
 import Socials from '../components/Socials';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
-
-
 
 const Home: React.FC = () => {
     const [text] = useTypewriter({
@@ -33,9 +29,10 @@ const Home: React.FC = () => {
                             </p>
                             {/* Button and Social */}
                             <div className="flex flex-col xl:flex-row items-center gap-8">
-                                <Socials containerStyles='flex gap-6' iconStyles='w-9 h-9 border border-secondary rounded-full flex
-                                justify-center items-center text-secondary text-base hover:bg-secondary hover:text-background
-                                hover:transition-all duration-500'/>
+                            <Socials 
+                                containerStyles='flex gap-6' 
+                                iconStyles={{ width: '4rem', height: '4rem', border: '1px solid', borderRadius: '50%' }}
+                            />
                             </div>
                         </div>
                         <div></div>
