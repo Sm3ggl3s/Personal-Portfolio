@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import { connectDB } from "./config/db";
 
-const port = process.env.PORT ||8000;
+const port = process.env.PORT || 8000;
 dotenv.config();
 connectDB();
 
