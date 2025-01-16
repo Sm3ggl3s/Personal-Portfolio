@@ -3,6 +3,8 @@ import { ProjectCardProps } from '../types/types';
 import { SiBootstrap, SiSvelte, SiTypescript, SiBlender, SiFlask, SiPostgresql, SiJupyter, SiGamemaker, SiGooglecloud,SiSqlalchemy, SiDocker, SiJavascript, SiExpress, SiReact, SiCss3, SiTailwindcss, SiPython, SiMongodb} from 'react-icons/si';
 import { FaNodeJs, FaHtml5, FaFigma, FaUnity, FaImages} from "react-icons/fa";
 import { PiFileCSharp } from "react-icons/pi";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 
@@ -83,7 +85,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                         </div>
                         <div className="pt-16 md:pt-32 flex-1 relative z-20 flex flex-col md:flex-row text-primary">
                             <div className="w-full md:w-1/2 pr-4">
-                                <h2 className='mt-0 mr-8 mb-3 font-normal text-2xl'> {project.name} </h2>
+                                <h2 className='mt-0 mr-8 font-normal text-2xl'> {project.name} </h2>
+                                <a href={project.githubRepo} target="_blank" rel="noopener noreferrer" className='text-lg font-normal mb-8 text-secondary'>
+                                    <FontAwesomeIcon icon= {faGithub} />
+                                </a>
                                 <p className='opacity text-sm font-normal mb-8 opacity-50'> {project.description}</p>
                             </div>
                             <div className="w-full md:w-1/2 pl-4 grid grid-cols-2 sm:grid-cols-3 gap-4 my-auto text-secondary">
